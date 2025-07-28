@@ -227,4 +227,4 @@ Google+: <https://plus.google.com/+CreativetimPage>
 Instagram: <https://instagram.com/creativetimofficial>
 
 
-Après avoir effectuer le clone en local faire "npm start" pour installer les dépendances nécessaires à react pour son fonctionnement. Créer ensuite 
+Après avoir effectuer le clone en local faire "npm start" pour installer les dépendances nécessaires à react pour son fonctionnement.

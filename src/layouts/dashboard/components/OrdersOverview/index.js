@@ -26,55 +26,36 @@ import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card sx={{ height: "100%", width: "350px" }}>
       <MDBox pt={3} px={3}>
-        <MDTypography variant="h6" fontWeight="medium">
-          Orders overview
+        <MDTypography variant="h2" fontWeight="medium">
+          Crédit
         </MDTypography>
-        <MDBox mt={0} mb={2}>
-          <MDTypography variant="button" color="text" fontWeight="regular">
-            <MDTypography display="inline" variant="body2" verticalAlign="middle">
-              <Icon sx={{ color: ({ palette: { success } }) => success.main }}>arrow_upward</Icon>
-            </MDTypography>
-            &nbsp;
-            <MDTypography variant="button" color="text" fontWeight="medium">
-              24%
-            </MDTypography>{" "}
-            this month
-          </MDTypography>
-        </MDBox>
       </MDBox>
-      <MDBox p={2}>
+      <MDBox p={2} sx={{ marginTop: "20px" }}>
         <TimelineItem
           color="success"
-          icon="notifications"
-          title="$2400, Design changes"
-          dateTime="22 DEC 7:20 PM"
+          icon="download"
+          title="Minimum de recharge"
+          dateTime="1000 XOF"
         />
         <TimelineItem
           color="error"
-          icon="inventory_2"
-          title="New order #1832412"
-          dateTime="21 DEC 11 PM"
+          icon="Percent"
+          title="Taux de commission prépayé"
+          dateTime="10%"
         />
         <TimelineItem
           color="info"
-          icon="shopping_cart"
-          title="Server payments for April"
-          dateTime="21 DEC 9:34 PM"
+          icon="Leaderboard"
+          title="Quota de vente restant"
+          dateTime="O XOF"
         />
         <TimelineItem
           color="warning"
-          icon="payment"
-          title="New card added for order #4395133"
+          icon="EventIcon"
+          title="Validité quota"
           dateTime="20 DEC 2:20 AM"
-        />
-        <TimelineItem
-          color="primary"
-          icon="vpn_key"
-          title="New card added for order #4395133"
-          dateTime="18 DEC 4:54 AM"
-          lastItem
         />
       </MDBox>
     </Card>

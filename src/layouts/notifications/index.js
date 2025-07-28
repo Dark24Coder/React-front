@@ -161,25 +161,25 @@ function Notifications() {
                 <Grid container spacing={3}>
                   <Grid item xs={12} sm={6} lg={3}>
                     <MDButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
-                      success notification
+                      Notification de succès
                     </MDButton>
                     {renderSuccessSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
                     <MDButton variant="gradient" color="info" onClick={openInfoSB} fullWidth>
-                      info notification
+                      Notifications d’info
                     </MDButton>
                     {renderInfoSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
                     <MDButton variant="gradient" color="warning" onClick={openWarningSB} fullWidth>
-                      warning notification
+                      Notifications d’avertissement
                     </MDButton>
                     {renderWarningSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
                     <MDButton variant="gradient" color="error" onClick={openErrorSB} fullWidth>
-                      error notification
+                      Notifications d’erreur
                     </MDButton>
                     {renderErrorSB}
                   </Grid>

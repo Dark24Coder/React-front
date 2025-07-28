@@ -51,7 +51,7 @@ import Icon from "@mui/material/Icon";
 const routes = [
   {
     type: "collapse",
-    name: "Dashboard",
+    name: "Tableau de bord",
     key: "dashboard",
     icon: <Icon fontSize="small">dashboard</Icon>,
     route: "/dashboard",
@@ -67,20 +67,20 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Billing",
+    name: "Facturation",
     key: "billing",
     icon: <Icon fontSize="small">receipt_long</Icon>,
     route: "/billing",
     component: <Billing />,
   },
-  {
-    type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
-    route: "/rtl",
-    component: <RTL />,
-  },
+  // {
+  //   type: "collapse",
+  //   name: "RTL",
+  //   key: "rtl",
+  //   icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
+  //   route: "/rtl",
+  //   component: <RTL />,
+  // },
   {
     type: "collapse",
     name: "Notifications",
@@ -99,7 +99,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign In",
+    name: "Se connecter",
     key: "sign-in",
     icon: <Icon fontSize="small">login</Icon>,
     route: "/authentication/sign-in",
@@ -107,7 +107,7 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Sign Up",
+    name: "S'inscrire",
     key: "sign-up",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/authentication/sign-up",

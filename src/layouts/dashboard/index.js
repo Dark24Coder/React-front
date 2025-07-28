@@ -15,6 +15,9 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -25,7 +28,6 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
-import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
@@ -35,6 +37,82 @@ import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import Projects from "layouts/dashboard/components/Projects";
 import OrdersOverview from "layouts/dashboard/components/OrdersOverview";
 
+// Composant de carte personnalisé avec dégradé
+function GradientStatCard({
+  // eslint-disable-next-line react/prop-types
+  title,
+  // eslint-disable-next-line react/prop-types
+  count,
+  // eslint-disable-next-line react/prop-types
+  iconBg = "#00D4AA",
+  // eslint-disable-next-line react/prop-types
+  bgGradient = "linear-gradient(135deg, #E8F9F5 0%, #B8E6D3 100%)",
+}) {
+  return (
+    <Card
+      sx={{
+        background: bgGradient,
+        borderRadius: "15px",
+        padding: "30px 25px",
+        minHeight: "120px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        border: "1px solid rgba(0, 0, 0, 0.02)",
+        boxShadow: "0 4px 12px rgba(0, 0, 0, 0.05)",
+      }}
+    >
+      {/* Icône avec arrière-plan coloré */}
+      <Box
+        sx={{
+          width: "48px",
+          height: "48px",
+          backgroundColor: iconBg,
+          borderRadius: "12px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: "16px",
+        }}
+      >
+        <Typography
+          sx={{
+            color: "white",
+            fontSize: "14px",
+            fontWeight: "bold",
+          }}
+        >
+          [0]
+        </Typography>
+      </Box>
+
+      {/* Titre */}
+      <Typography
+        sx={{
+          color: "#6B7280",
+          fontSize: "14px",
+          fontWeight: "500",
+          marginBottom: "8px",
+        }}
+      >
+        {title}
+      </Typography>
+
+      {/* Valeur principale */}
+      <Typography
+        sx={{
+          color: "#1F2937",
+          fontSize: "32px",
+          fontWeight: "bold",
+          lineHeight: "1",
+        }}
+      >
+        {count}
+      </Typography>
+    </Card>
+  );
+}
+
 function Dashboard() {
   const { sales, tasks } = reportsLineChartData;
 
@@ -43,69 +121,50 @@ function Dashboard() {
       <DashboardNavbar />
       <MDBox py={3}>
         <Grid container spacing={3}>
+          {/* Carte 1: Mon solde */}
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="dark"
-                icon="weekend"
-                title="Bookings"
-                count={281}
-                percentage={{
-                  color: "success",
-                  amount: "+55%",
-                  label: "than lask week",
-                }}
-              />
-            </MDBox>
+            <GradientStatCard
+              title="Mon solde"
+              count="0 XOF"
+              iconBg="#00D4AA"
+              bgGradient="linear-gradient(135deg, #E8F9F5 0%, #B8E6D3 100%)"
+            />
           </Grid>
+
+          {/* Carte 2: Recettes de ce mois */}
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                icon="leaderboard"
-                title="Today's Users"
-                count="2,300"
-                percentage={{
-                  color: "success",
-                  amount: "+3%",
-                  label: "than last month",
-                }}
-              />
-            </MDBox>
+            <GradientStatCard
+              title="Recettes de ce mois"
+              count="0 XOF"
+              iconBg="#3B82F6"
+              bgGradient="linear-gradient(135deg, #F3E8FF 0%, #DDD6FE 100%)"
+            />
           </Grid>
+
+          {/* Carte 3: Recettes d'aujourd'hui */}
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="success"
-                icon="store"
-                title="Revenue"
-                count="34k"
-                percentage={{
-                  color: "success",
-                  amount: "+1%",
-                  label: "than yesterday",
-                }}
-              />
-            </MDBox>
+            <GradientStatCard
+              title="Recettes d'aujourd'hui"
+              count="0 XOF"
+              iconBg="#10B981"
+              bgGradient="linear-gradient(135deg, #ECFDF5 0%, #BBF7D0 100%)"
+            />
           </Grid>
+
+          {/* Carte 4: Vendus aujourd'hui */}
           <Grid item xs={12} md={6} lg={3}>
-            <MDBox mb={1.5}>
-              <ComplexStatisticsCard
-                color="primary"
-                icon="person_add"
-                title="Followers"
-                count="+91"
-                percentage={{
-                  color: "success",
-                  amount: "",
-                  label: "Just updated",
-                }}
-              />
-            </MDBox>
+            <GradientStatCard
+              title="Vendus aujourd'hui"
+              count="0"
+              iconBg="#3B82F6"
+              bgGradient="linear-gradient(135deg, #F3E8FF 100%, #DDD6FE 50%)"
+            />
           </Grid>
         </Grid>
+
         <MDBox mt={4.5}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={4}>
+            {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsBarChart
                   color="info"
@@ -115,8 +174,8 @@ function Dashboard() {
                   chart={reportsBarChartData}
                 />
               </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            </Grid> */}
+            {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="success"
@@ -130,8 +189,8 @@ function Dashboard() {
                   chart={sales}
                 />
               </MDBox>
-            </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            </Grid> */}
+            {/* <Grid item xs={12} md={6} lg={4}>
               <MDBox mb={3}>
                 <ReportsLineChart
                   color="dark"
@@ -141,16 +200,16 @@ function Dashboard() {
                   chart={tasks}
                 />
               </MDBox>
-            </Grid>
+            </Grid> */}
           </Grid>
         </MDBox>
-        <MDBox>
+        <MDBox sx={{ marginTop: "30px" }}>
           <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={8}>
-              <Projects />
-            </Grid>
             <Grid item xs={12} md={6} lg={4}>
               <OrdersOverview />
+            </Grid>
+            <Grid item xs={12} md={6} lg={8}>
+              <Projects />
             </Grid>
           </Grid>
         </MDBox>
