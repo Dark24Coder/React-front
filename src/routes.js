@@ -47,6 +47,7 @@ import SignUp from "layouts/authentication/sign-up";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
+import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
 
 const routes = [
   {
@@ -59,55 +60,39 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
+    name: "Vendeurs",
     key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
+    icon: <Icon fontSize="small">badge</Icon>,
+    route: "/Vendeurs",
     component: <Tables />,
   },
   {
     type: "collapse",
-    name: "Facturation",
+    name: "Abonnements",
     key: "billing",
     icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
+    route: "/Abonnements",
     component: <Billing />,
   },
-  // {
-  //   type: "collapse",
-  //   name: "RTL",
-  //   key: "rtl",
-  //   icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
-  //   route: "/rtl",
-  //   component: <RTL />,
-  // },
   {
     type: "collapse",
-    name: "Notifications",
+    name: "Tickets",
     key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
+    icon: <ConfirmationNumberIcon fontSize="small" />,
+    route: "/Tickets",
     component: <Notifications />,
   },
   {
     type: "collapse",
-    name: "Profile",
+    name: "Routeurs",
     key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
+    icon: <Icon fontSize="small">router</Icon>,
+    route: "/Routeurs",
     component: <Profile />,
   },
   {
     type: "collapse",
     name: "Se connecter",
-    key: "sign-in",
-    icon: <Icon fontSize="small">login</Icon>,
-    route: "/authentication/sign-in",
-    component: <SignIn />,
-  },
-  {
-    type: "collapse",
-    name: "S'inscrire",
     key: "sign-up",
     icon: <Icon fontSize="small">assignment</Icon>,
     route: "/authentication/sign-up",

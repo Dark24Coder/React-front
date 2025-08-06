@@ -17,6 +17,7 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
+import Button from "@mui/material/Button";
 import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
@@ -50,10 +51,10 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "author", accessor: "author", width: "45%", align: "left" },
-      { Header: "function", accessor: "function", align: "left" },
-      { Header: "status", accessor: "status", align: "center" },
-      { Header: "employed", accessor: "employed", align: "center" },
+      { Header: "vendeurs", accessor: "author", width: "45%", align: "left" },
+      { Header: "Localisation", accessor: "function", align: "left" },
+      { Header: "Slug", accessor: "download", align: "center" },
+      { Header: "Abonnée depuis le", accessor: "employed", align: "center" },
       { Header: "action", accessor: "action", align: "center" },
     ],
 
@@ -61,10 +62,16 @@ export default function data() {
       {
         author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
         function: <Job title="Manager" description="Organization" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -80,10 +87,16 @@ export default function data() {
       {
         author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -99,10 +112,16 @@ export default function data() {
       {
         author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
         function: <Job title="Executive" description="Projects" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -118,10 +137,16 @@ export default function data() {
       {
         author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="online" color="success" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -137,10 +162,16 @@ export default function data() {
       {
         author: <Author image={team3} name="Richard Gran" email="richard@creative-tim.com" />,
         function: <Job title="Manager" description="Executive" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
@@ -156,10 +187,16 @@ export default function data() {
       {
         author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
         function: <Job title="Programator" description="Developer" />,
-        status: (
-          <MDBox ml={-1}>
-            <MDBadge badgeContent="offline" color="dark" variant="gradient" size="sm" />
-          </MDBox>
+        download: (
+          <Button
+            variant="contained"
+            style={{ color: "#333" }}
+            size="small"
+            href={`http://localhost:3001/download/123`}
+            target="_blank"
+          >
+            Télécharger
+          </Button>
         ),
         employed: (
           <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">

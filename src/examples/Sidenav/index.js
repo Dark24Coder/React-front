@@ -72,7 +72,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
     }
 
     /** 
-     The event listener that's calling the handleMiniSidenav function when resizing the window.
+      The event listener that's calling the handleMiniSidenav function when resizing the window.
     */
     window.addEventListener("resize", handleMiniSidenav);
 
@@ -179,19 +179,19 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         }
       />
       <List>{renderRoutes}</List>
-      {/* <MDBox p={2} mt="auto">
+      <MDBox p={2} mt="auto">
         <MDButton
           component="a"
-          href="https://www.creative-tim.com/product/material-dashboard-pro-react"
+          href="https://official-cdtiss.netlify.app/"
           target="_blank"
           rel="noreferrer"
           variant="gradient"
           color={sidenavColor}
           fullWidth
         >
-          upgrade to pro
+          En savoir plus sur CDTISS
         </MDButton>
-      </MDBox> */}
+      </MDBox>
     </SidenavRoot>
   );
 }

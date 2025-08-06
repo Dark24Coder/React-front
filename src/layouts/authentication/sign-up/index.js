@@ -48,22 +48,22 @@ function Cover() {
           textAlign="center"
         >
           <MDTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-            Join us today
+            Bienvenue
           </MDTypography>
           <MDTypography display="block" variant="button" color="white" my={1}>
-            Enter your email and password to register
+            Entrer votre email et votre mot de passe pour vous connecter
           </MDTypography>
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
-            <MDBox mb={2}>
-              <MDInput type="text" label="Name" variant="standard" fullWidth />
-            </MDBox>
+            {/* <MDBox mb={2}>
+              <MDInput type="text" label="Nom" variant="standard" fullWidth />
+            </MDBox> */}
             <MDBox mb={2}>
               <MDInput type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="password" label="Password" variant="standard" fullWidth />
+              <MDInput type="password" label="Mot de passe" variant="standard" fullWidth />
             </MDBox>
             <MDBox display="flex" alignItems="center" ml={-1}>
               <Checkbox />
@@ -73,7 +73,7 @@ function Cover() {
                 color="text"
                 sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
               >
-                &nbsp;&nbsp;I agree the&nbsp;
+                &nbsp;&nbsp;J’accepte&nbsp;
               </MDTypography>
               <MDTypography
                 component="a"
@@ -83,28 +83,13 @@ function Cover() {
                 color="info"
                 textGradient
               >
-                Terms and Conditions
+                les conditions d’utilisation
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
               <MDButton variant="gradient" color="info" fullWidth>
                 sign in
               </MDButton>
-            </MDBox>
-            <MDBox mt={3} mb={1} textAlign="center">
-              <MDTypography variant="button" color="text">
-                Already have an account?{" "}
-                <MDTypography
-                  component={Link}
-                  to="/authentication/sign-in"
-                  variant="button"
-                  color="info"
-                  fontWeight="medium"
-                  textGradient
-                >
-                  Sign In
-                </MDTypography>
-              </MDTypography>
             </MDBox>
           </MDBox>
         </MDBox>

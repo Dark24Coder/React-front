@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /**
 =========================================================
 * Material Dashboard 2 React - v2.2.0
@@ -7,18 +8,18 @@
 * Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+=========================================================
 */
 
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import { useState } from "react";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
+import MDInput from "components/MDInput";
+import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
 
 // Material Dashboard 2 React example components
@@ -26,14 +27,24 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
-
-// Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
-import projectsTableData from "layouts/tables/data/projectsTableData";
 
 function Tables() {
   const { columns, rows } = authorsTableData();
-  const { columns: pColumns, rows: pRows } = projectsTableData();
+
+  // Champs du formulaire
+  const [nom, setNom] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log("Membre à ajouter :", { nom, prenom, email });
+    setNom("");
+    setPrenom("");
+    setEmail("");
+  };
 
   return (
     <DashboardLayout>
@@ -52,8 +63,8 @@ function Tables() {
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
-                  Authors Table
+                <MDTypography variant="h4" color="white">
+                  Liste des vendeurs (ses)
                 </MDTypography>
               </MDBox>
               <MDBox pt={3}>
@@ -67,6 +78,8 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
+
+          {/* Formulaire d'ajout */}
           <Grid item xs={12}>
             <Card>
               <MDBox
@@ -79,18 +92,63 @@ function Tables() {
                 borderRadius="lg"
                 coloredShadow="info"
               >
-                <MDTypography variant="h6" color="white">
-                  Projects Table
+                <MDTypography variant="h4" color="text">
+                  Ajouter un vendeur
                 </MDTypography>
               </MDBox>
-              <MDBox pt={3}>
-                <DataTable
-                  table={{ columns: pColumns, rows: pRows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
+              <MDBox p={3}>
+                <MDTypography
+                  variant="h5"
+                  color="text"
+                  mb={2}
+                  textAlign="center"
+                  marginTop="10px"
+                  marginBottom="20px"
+                >
+                  Veuillez saisir les informations pour ajouter un nouveau vendeur
+                </MDTypography>
+                <form onSubmit={handleSubmit}>
+                  <Grid container spacing={2}>
+                    <Grid item xs={12} sm={6}>
+                      <MDInput
+                        type="text"
+                        label="Nom"
+                        value={nom}
+                        onChange={(e) => setNom(e.target.value)}
+                        fullWidth
+                        variant="standard"
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <MDInput
+                        type="text"
+                        label="Prénom"
+                        value={prenom}
+                        onChange={(e) => setPrenom(e.target.value)}
+                        fullWidth
+                        variant="standard"
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <MDInput
+                        type="email"
+                        label="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        fullWidth
+                        variant="standard"
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} marginTop={"20px"}>
+                      <MDButton type="submit" variant="gradient" color="info">
+                        Ajouter
+                      </MDButton>
+                    </Grid>
+                  </Grid>
+                </form>
               </MDBox>
             </Card>
           </Grid>

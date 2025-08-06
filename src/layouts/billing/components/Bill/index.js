@@ -27,7 +27,7 @@ import MDButton from "components/MDButton";
 // Material Dashboard 2 React context
 import { useMaterialUIController } from "context";
 
-function Bill({ name, company, email, vat, noGutter }) {
+function Bill({ nom, abonnement, email, montant, noGutter }) {
   const [controller] = useMaterialUIController();
   const { darkMode } = controller;
 
@@ -52,40 +52,40 @@ function Bill({ name, company, email, vat, noGutter }) {
           mb={2}
         >
           <MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
-            {name}
+            {nom}
           </MDTypography>
 
           <MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
             <MDBox mr={1}>
               <MDButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;delete
+                <Icon>delete</Icon>&nbsp;Supprimer
               </MDButton>
             </MDBox>
             <MDButton variant="text" color={darkMode ? "white" : "dark"}>
-              <Icon>edit</Icon>&nbsp;edit
+              <Icon>edit</Icon>&nbsp;Modifier
             </MDButton>
           </MDBox>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
           <MDTypography variant="caption" color="text">
-            Company Name:&nbsp;&nbsp;&nbsp;
+            Nom:&nbsp;&nbsp;&nbsp;
             <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
-              {company}
+              {nom}
             </MDTypography>
           </MDTypography>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
           <MDTypography variant="caption" color="text">
-            Email Address:&nbsp;&nbsp;&nbsp;
+            Adresse Email:&nbsp;&nbsp;&nbsp;
             <MDTypography variant="caption" fontWeight="medium">
               {email}
             </MDTypography>
           </MDTypography>
         </MDBox>
         <MDTypography variant="caption" color="text">
-          VAT Number:&nbsp;&nbsp;&nbsp;
+          Montant:&nbsp;&nbsp;&nbsp;
           <MDTypography variant="caption" fontWeight="medium">
-            {vat}
+            {montant}
           </MDTypography>
         </MDTypography>
       </MDBox>
@@ -100,10 +100,10 @@ Bill.defaultProps = {
 
 // Typechecking props for the Bill
 Bill.propTypes = {
-  name: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  nom: PropTypes.string.isRequired,
+  abonnement: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
-  vat: PropTypes.string.isRequired,
+  montant: PropTypes.string.isRequired,
   noGutter: PropTypes.bool,
 };
 
