@@ -36,6 +36,8 @@ function Tables() {
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
   const [email, setEmail] = useState("");
+  const [localisation, setLocalisation] = useState("");
+  const [abon, setAbon] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -44,6 +46,8 @@ function Tables() {
     setNom("");
     setPrenom("");
     setEmail("");
+    setLocalisation("");
+    setAbon("");
   };
 
   return (
@@ -78,8 +82,6 @@ function Tables() {
               </MDBox>
             </Card>
           </Grid>
-
-          {/* Formulaire d'ajout */}
           <Grid item xs={12}>
             <Card>
               <MDBox
@@ -131,7 +133,7 @@ function Tables() {
                         required
                       />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs={12} sm={6}>
                       <MDInput
                         type="email"
                         label="Email"
@@ -142,7 +144,29 @@ function Tables() {
                         required
                       />
                     </Grid>
-                    <Grid item xs={12} marginTop={"20px"}>
+                    <Grid item xs={12} sm={6}>
+                      <MDInput
+                        type="text"
+                        label="Localisation"
+                        value={localisation}
+                        onChange={(e) => setLocalisation(e.target.value)}
+                        fullWidth
+                        variant="standard"
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      <MDInput
+                        type="date"
+                        label="Abonnée depuis le"
+                        value={abon}
+                        onChange={(e) => setAbon(e.target.value)}
+                        fullWidth
+                        variant="standard"
+                        required
+                      />
+                    </Grid>
+                    <Grid item xs={12} marginTop="20px">
                       <MDButton type="submit" variant="gradient" color="info">
                         Ajouter
                       </MDButton>

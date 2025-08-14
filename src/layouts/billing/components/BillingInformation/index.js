@@ -20,42 +20,45 @@ import Card from "@mui/material/Card";
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 
 // Billing page components
 import Bill from "layouts/billing/components/Bill";
 
 function BillingInformation() {
   return (
-    <Card id="delete-account">
-      <MDBox pt={3} px={2}>
-        <MDTypography variant="h4" fontWeight="medium">
-          Information sur les vendeurs
-        </MDTypography>
-      </MDBox>
-      <MDBox pt={1} pb={2} px={2}>
-        <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
-          <Bill
-            nom="oliver liam"
-            abonnement="viking burrito"
-            email="oliver@burrito.com"
-            montant="FRB1235476"
-          />
-          <Bill
-            nom="lucas harper"
-            abonnement="stone tech zone"
-            email="lucas@stone-tech.com"
-            montant="FRB1235476"
-          />
-          <Bill
-            nom="ethan james"
-            abonnement="fiber notion"
-            email="ethan@fiber.com"
-            montant="FRB1235476"
-            noGutter
-          />
+    <>
+      <Card>
+        <MDBox pt={3} px={2}>
+          <MDTypography variant="h4" fontWeight="medium">
+            Information sur les vendeurs
+          </MDTypography>
         </MDBox>
-      </MDBox>
-    </Card>
+        <MDBox pt={1} pb={2} px={2}>
+          <MDBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+            <Bill
+              nom="oliver liam"
+              abonnement="viking burrito"
+              email="oliver@burrito.com"
+              montant="FRB1235476"
+            />
+            <Bill
+              nom="lucas harper"
+              abonnement="stone tech zone"
+              email="lucas@stone-tech.com"
+              montant="FRB1235476"
+            />
+            <Bill
+              nom="ethan james"
+              abonnement="fiber notion"
+              email="ethan@fiber.com"
+              montant="FRB1235476"
+              noGutter
+            />
+          </MDBox>
+        </MDBox>
+      </Card>
+    </>
   );
 }
 

@@ -117,7 +117,7 @@ function Basic() {
                   fontWeight="medium"
                   textGradient
                 >
-                  Sign up
+                  Se connecter
                 </MDTypography>
               </MDTypography>
             </MDBox>

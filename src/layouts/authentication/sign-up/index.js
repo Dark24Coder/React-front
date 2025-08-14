@@ -54,11 +54,8 @@ function Cover() {
             Entrer votre email et votre mot de passe pour vous connecter
           </MDTypography>
         </MDBox>
-        <MDBox pt={4} pb={3} px={3}>
+        <MDBox pt={4} pb={3} px={3} padding="50px">
           <MDBox component="form" role="form">
-            {/* <MDBox mb={2}>
-              <MDInput type="text" label="Nom" variant="standard" fullWidth />
-            </MDBox> */}
             <MDBox mb={2}>
               <MDInput type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
@@ -88,7 +85,7 @@ function Cover() {
             </MDBox>
             <MDBox mt={4} mb={1}>
               <MDButton variant="gradient" color="info" fullWidth>
-                sign in
+                Se connecter
               </MDButton>
             </MDBox>
           </MDBox>

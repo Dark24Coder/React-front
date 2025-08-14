@@ -27,12 +27,12 @@ import TimelineItem from "examples/Timeline/TimelineItem";
 function OrdersOverview() {
   return (
     <Card sx={{ height: "100%", width: "350px" }}>
-      <MDBox pt={3} px={3}>
+      {/* <MDBox pt={3} px={3}>
         <MDTypography variant="h2" fontWeight="medium">
           Crédit
         </MDTypography>
-      </MDBox>
-      <MDBox p={2} sx={{ marginTop: "20px" }}>
+      </MDBox> */}
+      {/* <MDBox p={2} sx={{ marginTop: "20px" }}>
         <TimelineItem
           color="success"
           icon="download"
@@ -57,7 +57,7 @@ function OrdersOverview() {
           title="Validité quota"
           dateTime="20 DEC 2:20 AM"
         />
-      </MDBox>
+      </MDBox> */}
     </Card>
   );
 }

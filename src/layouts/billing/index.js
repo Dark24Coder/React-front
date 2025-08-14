@@ -58,13 +58,13 @@ function Billing() {
 
   return (
     <DashboardLayout>
-      <DashboardNavbar absolute isMini />
+      <DashboardNavbar />
       <MDBox mt={8}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
               {/* Formulaire d'ajout */}
-              <Grid item xs={12}>
+              {/* <Grid item xs={12}>
                 <Card>
                   <MDBox
                     mx={2}
@@ -154,10 +154,10 @@ function Billing() {
                     </form>
                   </MDBox>
                 </Card>
-              </Grid>
+              </Grid> */}
             </Grid>
             <Grid item xs={12} lg={4}>
-              <Invoices />
+              {/* <Invoices /> */}
             </Grid>
           </Grid>
         </MDBox>
@@ -167,7 +167,7 @@ function Billing() {
               <BillingInformation vendeurs={vendeurs} />
             </Grid>
             <Grid item xs={12} md={5}>
-              <Transactions />
+              {/* <Transactions /> */}
             </Grid>
           </Grid>
         </MDBox>
