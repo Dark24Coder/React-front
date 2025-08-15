@@ -37,7 +37,7 @@ function BasicLayout({ image, children }) {
           type: "external",
           route: "https://creative-tim.com/product/material-dashboard-react",
           label: "free download",
-          color: "dark",
+          color: "moi",
         }}
       />
       <MDBox
@@ -51,18 +51,18 @@ function BasicLayout({ image, children }) {
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
             )}, url(${image})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
+          // backgroundSize: "cover",
+          // backgroundPosition: "center",
+          // backgroundRepeat: "no-repeat",
         }}
       />
-      <MDBox px={1} width="100%" height="100vh" mx="auto">
+      {/* <MDBox px={1} width="100%" height="100vh" mx="auto">
         <Grid container spacing={1} justifyContent="center" alignItems="center" height="100%">
           <Grid item xs={11} sm={9} md={5} lg={4} xl={3}>
             {children}
           </Grid>
         </Grid>
-      </MDBox>
+      </MDBox> */}
       <Footer light />
     </PageLayout>
   );

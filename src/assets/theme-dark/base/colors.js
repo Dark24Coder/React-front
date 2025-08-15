@@ -66,6 +66,16 @@ const colors = {
     focus: "#67bb6a",
   },
 
+  moi: {
+    main: "#009fe3",
+    focus: "#1883b0ff",
+  },
+
+  toi: {
+    main: "#0d2d80",
+    focus: "#1250efff",
+  },
+
   warning: {
     main: "#fb8c00",
     focus: "#fc9d26",
@@ -221,6 +231,16 @@ const colors = {
     success: {
       background: "#bce2be",
       text: "#339537",
+    },
+
+    moi: {
+      background: "#009fe3",
+      text: "#69848fff",
+    },
+
+    toi: {
+      background: "#0d2d80",
+      text: "#ffffffff",
     },
 
     warning: {

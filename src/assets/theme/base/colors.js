@@ -59,6 +59,16 @@ const colors = {
     focus: "#1662C4",
   },
 
+  moi: {
+    main: "#009fe3",
+    focus: "#1883b0ff",
+  },
+
+  toi: {
+    main: "#0d2d80",
+    focus: "#1250efff",
+  },
+
   success: {
     main: "#4CAF50",
     focus: "#67bb6a",
@@ -135,6 +145,16 @@ const colors = {
     dark: {
       main: "#42424a",
       state: "#191919",
+    },
+
+    moi: {
+      main: "#009fe3",
+      focus: "#1883b0ff",
+    },
+
+    toi: {
+      main: "#0d2d80",
+      focus: "#1250efff",
     },
   },
 

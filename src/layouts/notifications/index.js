@@ -78,7 +78,7 @@ function Notifications() {
 
                 {!showUploader ? (
                   <MDBox display="flex" justifyContent="center">
-                    <MDButton variant="gradient" color="primary" onClick={toggleUploader}>
+                    <MDButton variant="gradient" color="toi" onClick={toggleUploader}>
                       Ajouter
                     </MDButton>
                   </MDBox>
@@ -95,7 +95,7 @@ function Notifications() {
                       <MDButton
                         variant="outlined"
                         component="span"
-                        color="info"
+                        color="toi"
                         style={{ border: "none", fontSize: "15px", marginLeft: "10px" }}
                       >
                         Choisir un fichier
@@ -113,7 +113,7 @@ function Notifications() {
                       </MDTypography>
                     )}
 
-                    <MDButton variant="gradient" color="success" onClick={handleUpload}>
+                    <MDButton variant="gradient" color="moi" onClick={handleUpload}>
                       Ajouter
                     </MDButton>
                     <MDButton variant="outlined" color="secondary" onClick={toggleUploader}>
